@@ -16,4 +16,4 @@ app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
-app.listen(4200, () =>  console.log("Running on port 4200"));
+app.listen(process.env.PORT || 4200, () =>  console.log("Running on port 4200"));
